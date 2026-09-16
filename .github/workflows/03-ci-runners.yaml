@@ -1,4 +1,4 @@
-name: "Understanding Runners"
+name: "03- Understanding Runners"
 on: push
 jobs:
   runner-info-job:
