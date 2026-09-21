@@ -60,8 +60,8 @@ jobs:
         run: |
           docker run -d \
             -p 5000:5000 \
-            --name flask-container \    
-            $DOCKER_USERNAME/$APPLICATION_NAME:$IMAGE_TAG
+            --name flask-container \
+            $DOCKERHUB_USERNAME/$APPLICATION_NAME:$IMAGE_TAG
 
       - name: Smoke Test Application
         run: |
@@ -82,4 +82,4 @@ jobs:
       - name: Cleanup Containers
         if: ${{ always() }}
         run: |
-          docker rm -f flask-container || true    
+          docker rm -f flask-container || true
